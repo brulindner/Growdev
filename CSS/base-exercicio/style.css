@@ -1,0 +1,27 @@
+* {
+    font-family: Arial, sans-serif;
+}
+
+
+.titulo-secao {
+    font-size: 24px;
+    background-color: rgb(243, 166, 244);
+}
+
+#texto-copyright {
+    font-size: 14px;
+    color: gray;
+    text-align: center;
+}
+
+.formacao > p {
+    text-transform: uppercase;
+}
+
+.experiencias-profissionais > .descricao-cargo {
+    color: purple;
+}
+
+.contato a {
+    text-decoration: none;
+}

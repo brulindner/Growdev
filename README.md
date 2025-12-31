@@ -16,7 +16,7 @@ Principais tecnologias praticadas neste repositório:
 
 <p>
   Desenvolvido por <strong>Bruna Laís Lindner</strong> durante sua Formação de Desenvolvimento com VTEX IO da Growdev 🎓
-  <br>
+  <br><br>
   <a href="https://www.linkedin.com/in/brulindner" target="_blank">
     <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank">
   </a>

@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: "Roboto", sans-serif ;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (min-width: 769px) {
+
+header {
+    background-color: #3B63B6;
+    color: white;
+    padding: 20px 40px;
+}
+
+ul {
+    display: flex;
+    gap: 40px;
+    list-style-type: none;
+}
+
+
+
+header a {
+    text-decoration: none; 
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+header a:hover {
+    text-decoration: underline; 
+    color: #bababa;
+}
+
+.img{
+    width:450px;
+    
+}
+
+h2{
+    font-size: 50px;
+    margin: 0;
+}
+
+p{
+    font-size: 15px;
+}
+
+#saiba-mais{
+    text-align: center;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+#saiba-mais button{
+    background-color: #3B63B6;
+    color: white;
+    padding: 12px 35px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+}
+
+#saiba-mais button:hover{
+    background-color: #2f4f95;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+#quem-somos{
+    margin-top: 80px;
+    margin-bottom: 80px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    gap: 48px;
+    justify-content: center;
+    align-items: center;
+}
+
+#quem-somos div{
+    text-align: left;
+    width: 60%;
+}
+
+#quem-somos img{
+    width: 40%;
+}
+
+
+#planos {
+    display: flex;          
+    flex-direction: column;  
+    align-items: center;    
+    text-align: center;      
+    gap: 20px;               
+}
+
+table {
+    width: 100%;
+    max-width: 800px; 
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th, td {
+    border: 1px solid #e0e0e0; 
+    padding: 15px; 
+}
+
+th {
+    text-align: left;
+    font-weight: bold;
+    color: #000;
+}
+
+td {
+    text-align: center;
+}
+
+thead th.titulo {
+    text-align: center;
+    color: #000;
+    font-weight: 900;
+}
+
+.btn-whatsapp {
+    position: fixed;
+    bottom: 30px;    
+    right: 30px;    
+    
+    background-color: #25d366; 
+    color: #FFF;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.btn-whatsapp:hover {
+    background-color: #20b85a;
+}
+
+
+#rodape{
+    text-align: center;
+    font-size: 12px;
+    color: #999;    
+    padding: 20px;
+    border-top: 1px solid #ddd;
+}
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+header {
+        background-color: #3B63B6;
+        color: white;
+        padding: 20px; 
+    }
+
+    ul {
+        display: flex;
+        gap: 20px; 
+        list-style-type: none;
+        justify-content: center; 
+        padding: 0;
+    }
+
+    header a {
+        text-decoration: none; 
+        color: white;
+        text-transform: uppercase;
+        font-size: 13px; 
+    }
+
+    header a:hover {
+        text-decoration: underline; 
+        color: #bababa;
+    }
+
+    .img {
+        width: 100%; 
+        max-width: 450px;
+        height: auto;
+    }
+
+    h2 {
+        font-size: 35px; 
+        margin: 0;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    #saiba-mais {
+        text-align: center;
+        display: flex;
+        flex-direction: column; 
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #saiba-mais button {
+        background-color: #3B63B6;
+        color: white;
+        padding: 12px 35px;
+        border: none;
+        border-radius: 30px;
+        font-size: 16px;
+    }
+
+    #saiba-mais button:hover {
+        background-color: #2f4f95;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+  
+    #quem-somos {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        border-top: 1px solid #ddd;
+        display: flex;
+        flex-direction: column; 
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    #quem-somos div {
+        text-align: center;
+        width: 100%; 
+    }
+
+    #quem-somos img {
+        width: 60%;
+        max-width: 300px;
+    }
+
+    #planos {
+        display: flex;          
+        flex-direction: column;  
+        align-items: center;    
+        text-align: center;      
+        gap: 20px;
+        padding: 0 10px;               
+    }
+
+    table {
+        width: 100%;
+        max-width: 100%; 
+        border-collapse: collapse;
+        font-size: 12px; 
+    }
+
+    th, td {
+        border: 1px solid #e0e0e0; 
+        padding: 10px; 
+    }
+
+    th {
+        text-align: left;
+        font-weight: bold;
+        color: #000;
+    }
+
+    td {
+        text-align: center;
+    }
+
+    thead th.titulo {
+        text-align: center;
+        color: #000;
+        font-weight: 900;
+    }
+
+    .btn-whatsapp {
+        position: fixed;
+        bottom: 20px;    
+        right: 20px;    
+        
+        background-color: #25d366; 
+        color: #FFF;
+        width: 50px; 
+        height: 50px;
+        border-radius: 50%; 
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000; 
+    }
+
+    .btn-whatsapp:hover {
+        background-color: #20b85a;
+    }
+
+    #rodape {
+        text-align: center;
+        font-size: 11px;
+        color: #999;    
+        padding: 15px;
+        border-top: 1px solid #ddd;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    header {
+        background-color: #3B63B6;
+        color: white;
+        padding: 15px; 
+        text-align: center; 
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column; 
+        gap: 15px; 
+        padding: 0;
+        margin-top: 20px;
+        list-style-type: none;
+    }
+
+    header a {
+        text-decoration: none; 
+        color: white;
+        text-transform: uppercase;
+        font-size: 14px;
+        display: block; 
+        padding: 5px;   
+    }
+
+    header a:hover {
+        text-decoration: underline; 
+        color: #bababa;
+    }
+
+  
+    .img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 28px; 
+        margin-bottom: 10px;
+        line-height: 1.2;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.5; 
+    }
+
+    #saiba-mais {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    #saiba-mais button {
+        background-color: #3B63B6;
+        color: white;
+        padding: 15px 30px; 
+        border: none;
+        border-radius: 30px;
+        font-size: 16px;
+        width: 100%; 
+        max-width: 300px;
+    }
+
+    #saiba-mais button:hover {
+        background-color: #2f4f95;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    #quem-somos {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        border-top: 1px solid #ddd;
+        display: flex;
+        flex-direction: column; 
+        gap: 30px;
+        padding: 20px;
+    }
+
+    #quem-somos div {
+        text-align: center;
+        width: 100%;
+    }
+
+    #quem-somos img {
+        width: 80%; 
+        max-width: 250px;
+        margin: 0 auto; 
+    }
+
+    #planos {
+        display: flex;          
+        flex-direction: column;  
+        align-items: center;    
+        text-align: center;      
+        gap: 20px; 
+        padding: 10px;             
+    }
+
+    
+    table {
+        width: 100%;
+        font-size: 11px; 
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid #e0e0e0; 
+        padding: 8px 4px; 
+    }
+
+    .btn-whatsapp {
+        position: fixed;
+        bottom: 15px;    
+        right: 15px;    
+        
+        background-color: #25d366; 
+        color: #FFF;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%; 
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+    }
+    
+    .btn-whatsapp svg, .btn-whatsapp i {
+        font-size: 24px; 
+    }
+
+    #rodape {
+        text-align: center;
+        font-size: 11px;
+        color: #999;    
+        padding: 20px;
+        border-top: 1px solid #ddd;
+    }
+}
+
+

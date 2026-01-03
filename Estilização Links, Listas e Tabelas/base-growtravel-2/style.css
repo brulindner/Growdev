@@ -30,6 +30,7 @@ header a {
 
 header a:hover {
     text-decoration: underline; 
+    color: #bababa;
 }
 
 .img{
@@ -57,11 +58,13 @@ p{
     border: none;
     border-radius: 30px;
     font-size: 16px;
-    cursor: pointer;
 }
 
 #saibaMais button:hover{
     background-color: #2f4f95;
+    font-weight: bold;
+    cursor: pointer;
+
 }
 
 #quemSomos{
@@ -107,6 +110,29 @@ thead th.titulo {
     text-align: center;
     color: #000;
     font-weight: 900;
+}
+
+.btn-whatsapp {
+    position: fixed;
+    bottom: 30px;    
+    right: 30px;    
+    
+    background-color: #25d366; 
+    color: #FFF;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.btn-whatsapp:hover {
+    background-color: #20b85a;
 }
 
 

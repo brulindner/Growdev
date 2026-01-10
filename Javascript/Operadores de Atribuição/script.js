@@ -9,7 +9,7 @@ console.log(saldoConta)
 // Questão 02: Uma loja vendeu 2 unidades de um produto que possui 50 unidades em estoque. Atualize o estoque
 
 let estoque = 50
-const quantidadeVenda = 3
+const quantidadeVenda = 5
 
 estoque -= quantidadeVenda
 console.log(estoque)

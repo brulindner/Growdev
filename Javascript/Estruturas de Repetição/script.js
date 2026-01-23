@@ -39,3 +39,20 @@ if(numero > 0){
 }
     */
 
+// DO WHILE
+
+//Crie um programa que solicite a pessoa usuaria para inserir numeros positivos e continue somando esses números até que um número negativo seja digitado. Ao final, exiba o total da soma.
+
+let soma  = 0
+let numero
+
+do{
+     numero = parseInt(prompt("Digite um número inteiro positivo para somar (ou negativo para finalizar):  "))
+
+    if(numero > 0){
+        soma += numero
+    }
+
+} while(numero >= 0)
+
+    console.log(soma)

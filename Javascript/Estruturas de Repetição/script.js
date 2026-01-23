@@ -39,6 +39,7 @@ if(numero > 0){
 }
     */
 
+/*
 // DO WHILE
 
 //Crie um programa que solicite a pessoa usuaria para inserir numeros positivos e continue somando esses números até que um número negativo seja digitado. Ao final, exiba o total da soma.
@@ -56,3 +57,14 @@ do{
 } while(numero >= 0)
 
     console.log(soma)
+    */
+
+// For
+
+//Crie um programa que exiba a tabuada de multiplicação de um número fornecido pela pessoa  usuária
+
+let numero = parseInt(prompt('Digite um número: '))
+
+for(let i = 1; i<=10; i++){
+    console.log(`${numero} x ${i} = ${numero * i}`)
+}

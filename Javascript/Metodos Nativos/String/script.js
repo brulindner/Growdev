@@ -1,10 +1,11 @@
+/*
 let nome = '    Bruna Lais    ';
 console.log(nome);
 console.log(nome.trim())
 console.log(nome.trimStart())
 console.log(nome.trimEnd())
 
-
+*/
 let titulo = 'Práticas Avançadas em JavaScript'
 console.log(titulo.toUpperCase())
 console.log(titulo.toLowerCase())
@@ -14,6 +15,7 @@ console.log(tituloPython)
 
 let tituloSemLetraA = titulo.replaceAll("a", "X")
 console.log(tituloSemLetraA)
+
 
 //Indices
 let index = titulo.indexOf("JavaScript")
@@ -59,3 +61,34 @@ disciplinas = disciplinas.concat(", ", "react", ", ", "python")
 console.log(disciplinas) 
 //Forma de concatenar strings, juntar strings com outra
 
+//EXERCICIOS 
+
+// 01 - Um cliente chamado "João" preencheu o formulário com o nome cheio de espaços em branco no início e no final. Agora, você precisa corrigir isso
+
+const cliente = '   João    '
+console.log(cliente.trim());
+
+// 02 - Uma aluna chamada "Ana" preencheu um formulário, e o sistema precisa exibir o nome dela em letras maiusculas, já que será usado em um banner publicitário. Converta todo o nome para maiuscula
+
+const aluno = "ana"
+console.log(aluno.toUpperCase())
+
+// 03 - Um escritor chamado "Paulo" está escrevendo um livro e, por engano, usou a palavra "antigo" onde deveria estar "novo". Substitua todas as ocorrências da palavra "antigo" por "novo" no texto abaixo: 
+
+const livro = "O livro antigo foi revisado. A capa do livro antigo também foi trocada"
+
+let livroNovo = livro.replaceAll("antigo", "novo")
+console.log(livroNovo)
+
+// 04 - Um professor está verificando as respostas de seus alunos e ele quer garantir que todas as respostas iniciem com a palavra "Resposta". Verifique se as respostas abaixo começam com a palavra "resposta"
+const resposta1 = "Resposta: A capital do Brasil é Brasília"
+const resposta2= "Minha resposta: A capital do Brasil é Brasília"
+
+console.log(resposta1.startsWith("Resposta"))
+console.log(resposta2.startsWith("Resposta"))
+
+// 05 - Um usuário quer garantir que sua mensagem de saudação termine com "!" no final. Ele já escreveu a saudação "Olá, como vai", mas quer adicionar um ponto de exclamação no final usando um método
+
+const saudacao = "Olá, como vai"
+const saudacaoFinal = saudacao.concat("!")
+console.log(saudacaoFinal)

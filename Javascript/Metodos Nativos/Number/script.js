@@ -54,3 +54,30 @@ console.log(aleatorio)
 
 let aleatorioEntre0e100 = (aleatorio * 1000) % 100; //Como eu quero um número aleatório entre 0 e 100 e o Random só gera entre 0 e 1, primeiro eu multiplico (por mil nesse caso, para obter mais possibilidades) e depois faço o resto da divisão por 100. Pois dessa forma, não é possível que gere um número maior que 100
 console.log(aleatorioEntre0e100)
+
+//EXERCICIOS
+
+// Um engenheiro está trabalhando em um projeto e precisa calcular a potência de um número. Faça um código que calcule o valor de 5 elevado ao cubo
+
+let num = 30
+console.log(Math.pow(num, 3)) 
+
+// 02 - Uma pessoa está preenchendo um formulário online e inseriu a idade como "25 anos" (uma string). O sistema precisa extrair apenas o número inteira dessa string
+
+let idade = parseInt("25 anos")
+console.log(idade)
+
+// 03 - Um contador está calculando a taxa de um empréstimo e obteve um número com muitas casas decimais. Ele precisa formatar esse número para que tenha apenas 2 casas decimais. 
+
+let taxaEmprestimo = 3.25115245
+
+console.log(taxaEmprestimo.toFixed(2))
+
+// 04 - Uma equipe de cientistas registrou as temperaturas mais altas de três cidades diferentes. Agora, eles precisam descobrir qual a maior temperatura registrada entre essas cidades 
+
+let schroeder = 29
+let jaraguaDoSul = 31
+let guaramirim = 28
+
+let maiorTemperatura = Math.max(schroeder, jaraguaDoSul, guaramirim)
+console.log(maiorTemperatura)

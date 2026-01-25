@@ -59,6 +59,7 @@ do{
     console.log(soma)
     */
 
+    /*
 // For
 
 //Crie um programa que exiba a tabuada de multiplicação de um número fornecido pela pessoa  usuária
@@ -67,4 +68,24 @@ let numero = parseInt(prompt('Digite um número: '))
 
 for(let i = 1; i<=10; i++){
     console.log(`${numero} x ${i} = ${numero * i}`)
+}
+*/
+
+/*
+// Questão 01: Imprima os números de 1 a 10, cada um em uma linha
+
+for(let i = 1; i<=10; i++){
+    console.log(i)
+}
+    */
+
+// Questão 2: Peça ao usuário para inserir palavras. Continue pedido até que o usuário digite a palavra "sair". Exiba cada palavra digitada
+
+do { 
+    let palavra = prompt('Digite qualquer palavra ou sair para encerrar')
+
+   
+} while (palavra !== 'sair' ){
+    console.log('Você digitou a palavra', palavra)
+    palavra = prompt('Digite uma palavra (ou sair para encerrar)')
 }

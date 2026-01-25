@@ -29,3 +29,33 @@ console.log(subtitulo)
 subtitulo = titulo.slice(index)
 console.log(subtitulo)
 //Aceita também números negativos para contar de trás para frente (ex: pegar as últimas 3 letras).
+
+let nomeCliente = "Maria Joana da Silva Souza"
+
+console.log(nomeCliente)
+console.log(nomeCliente.startsWith("Maria"))
+console.log(nomeCliente.endsWith("da Silva"))
+// O startsWith retorna true ou false, dependendo se o nome realmente começa ou não com o arumento informado. Mesma coisa com o endsWith. Isso é importante para fazer uma lógica para saber por exemplo, quantos "da Silva" ou quantas "Maria" temos no sistema
+
+console.log(nomeCliente.includes("da Silva"))
+//Dessa forma, localiza se o nome da pessoa contém o sobrenome "da Silva". Usando esse, mesmo que o nome dela fosse Maria Joana da Silva Souza, ainda retornaria true pois contém "da Silva" no sobrenome dela
+
+let clientesSilva = nomeCliente.includes("da Silva")
+if(clientesSilva){
+    console.log("Sim, o cliente é da família da Silva")
+} else{
+    console.log("Não é da família")
+}
+
+//Transformando uma string em uma lista:
+
+let disciplinas = "frontend, backend, banco de dados, git"
+let listaDisciplinas = disciplinas.split(", ") //aqui, estou informando que o que separa os meus itens da lista, são uma vírgula e um espaço
+
+console.log(disciplinas)
+console.log(listaDisciplinas)
+
+disciplinas = disciplinas.concat(", ", "react", ", ", "python") 
+console.log(disciplinas) 
+//Forma de concatenar strings, juntar strings com outra
+

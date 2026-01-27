@@ -52,7 +52,7 @@ estanteDeLivros.shift();
 console.table(estanteDeLivros)
 
 //FILTER
-
+/*
 let recados = [
     {
         id: 312,
@@ -77,11 +77,12 @@ let recados = [
 ];
 
 console.table(recados);
+*/
 
 /*
 let recadosUrgentes = recados.filter((recado) => {
     return recado.urgente;
-})*/
+})
 
 let recadosUrgentes = recados.filter((recado) => recado.urgente); //Quando cabe em uma linha, é mais usado dessa forma no dia a dia. Não é necessário o return, nem as chaves. 
 
@@ -90,11 +91,13 @@ console.table(recadosUrgentes)
 let recadosJavascript = recados.filter((recado) => recado.descricao.includes("Javascript"));
 
 console.table(recadosJavascript)
+*/
 
 //EXERCICIOS
 
 
 // 1 - Um usuário tem uma lista de números e deseja filtrar apenas os números pares
+/*
 let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 let numerosPares = numeros.filter((numero)=> numero%2 ===0)
@@ -135,5 +138,93 @@ let cidades = [
 let cidadesRs = cidades.filter((cidades)=> cidades.estado=="RS")
 
 console.table(cidadesRs)
-   
+  */
+
+//FIND
+
+let recados = [
+    {
+        id: 312,
+        descricao: "Estudar Javascript",
+        urgente: true
+    },
+    {
+        id: 412,
+        descricao: "Fazer os exercícios",
+        urgente: true
+    },
+    {
+        id: 117,
+        descricao: "Entender listas",
+        urgente: false
+    },
+    {
+        id: 55,
+        descricao: "Comparar Javascript com python",
+        urgente: false
+    },
+];
+
+let recadoListas = recados.find(item => item.id === 117)
+console.log(recadoListas)
  
+// O Find retorna no máximo um registro. Se houver mais de uma ocorrência, ele retorna somente a primeira da lista. Normalmente ele é usado para Id. 
+
+let recadoInexistente = recados.find(item => item.id == 999)
+console.log(recadoInexistente)
+/*
+if(!recadoInexistente){
+    alert("Erro, o recado não existe!")
+}
+*/
+
+
+// FIND INDEX
+
+let posicaoRecadoListas = recados.findIndex(item => item.id ===117);
+console.log(posicaoRecadoListas);
+
+let posicaoRecadoInexistente = recados.findIndex(item => item.id===999)
+console.log(posicaoRecadoInexistente)
+
+// O find index retorna a posição do item. Quando o item não existe, ele retorna -1. Saber a posição é muito importante para conseguir fazer manipulações em uma lista. 
+
+// EXERCICIOS
+
+//1 - Encontre o primeiro número par da lista abaixo e exiba no console a posição desse número na lista
+const numeros = [1, 3, 7, 8, 9, 12, 20, 21]
+
+let numeroPar = numeros.findIndex(numeros => numeros % 2 === 0)
+console.log(numeroPar)
+
+// 2 - Considere a lista de produtos abaixo e resolva as questões para determinados produtos. Se houver produto com a condição da questão, mostre o produto no console. Caso contrário, exiba "Produto não encontrado"
+
+const produtos = [
+    {nome: "Caneta", preco: 5, estoque: 6},
+    {nome: "Caderno", preco: 20, estoque: 20},
+    {nome: "Mochila", preco: 150, estoque: 2},
+    {nome: "Borracha", preco: 3, estoque: 1},
+    {nome: "Lápis", preco: 2, estoque: 12},
+];
+
+// Encontre o primeiro produto caro (acima de R$ 100)
+
+let produtoCaro = produtos.find(produtos => produtos.preco > 100)
+console.log(produtoCaro)
+
+// Encontre o primeiro produto que está sem estoque
+
+let produtoSemEstoque = produtos.find(produtos => produtos.estoque==0)
+console.log(produtoSemEstoque)
+    if(!produtoSemEstoque){
+    console.log("Produto não encontrado")
+} else{
+    console.log(produtoSemEstoque)
+}
+
+// Encontre o primeiro produto que possue ao menos 10 itens no estoque
+
+let produtoComEstoque = produtos.find(produtos => produtos.estoque >=10)
+console.log(produtoComEstoque)
+
+

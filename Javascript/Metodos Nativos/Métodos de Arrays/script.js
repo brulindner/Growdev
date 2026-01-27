@@ -224,7 +224,10 @@ console.log(produtoSemEstoque)
 
 // Encontre o primeiro produto que possue ao menos 10 itens no estoque
 
-let produtoComEstoque = produtos.find(produtos => produtos.estoque >=10)
-console.log(produtoComEstoque)
-
+let produto10ItensEstoque = produtos.find(produtos => produtos.estoque >=10)
+ if(!produto10ItensEstoque){
+    console.log("Produto não encontrado")
+} else{
+    console.log(produto10ItensEstoque)
+}
 

@@ -51,4 +51,42 @@ console.table(estanteDeLivros)
 estanteDeLivros.shift();
 console.table(estanteDeLivros)
 
+//FILTER
 
+let recados = [
+    {
+        id: 312,
+        descricao: "Estudar Javascript",
+        urgente: true
+    },
+    {
+        id: 412,
+        descricao: "Fazer os exercícios",
+        urgente: true
+    },
+    {
+        id: 117,
+        descricao: "Entender listas",
+        urgente: false
+    },
+    {
+        id: 55,
+        descricao: "Comparar Javascript com python",
+        urgente: false
+    },
+];
+
+console.table(recados);
+
+/*
+let recadosUrgentes = recados.filter((recado) => {
+    return recado.urgente;
+})*/
+
+let recadosUrgentes = recados.filter((recado) => recado.urgente); //Quando cabe em uma linha, é mais usado dessa forma no dia a dia. Não é necessário o return, nem as chaves. 
+
+console.table(recadosUrgentes)
+
+let recadosJavascript = recados.filter((recado) => recado.descricao.includes("Javascript"));
+
+console.table(recadosJavascript)

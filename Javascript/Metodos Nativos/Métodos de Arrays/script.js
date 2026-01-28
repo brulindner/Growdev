@@ -442,3 +442,64 @@ let tarefasDoCampeonato = [
 
 tarefasDoCampeonato.reverse()
 console.log(tarefasDoCampeonato)
+
+//SORT
+//Ele ordena de forma crescente por padrão. Mas vc pode passar uma função, para fazer ele ordenar de formas diferentes. 
+
+let clientes = ["João", "Maria", "Cleide", "Pedro"]
+
+//clientes.sort();
+//console.log(clientes) // Dessa forma, ordenou de forma crescente. Ordem alfabética
+
+clientes.sort((a,b) =>{
+    // retornar -1 (quando "a" deve ir antes de "b"), 0 (retornar 0 quando não faz diferença a ordem), 1 (retornar 1 quando "b" deve ir antes de "a")
+
+    if (a < b ){
+        return -1;
+    }
+
+    if(a === b){
+        return 0;
+    }
+
+    if(a > b){
+        return 1;
+    }
+// Dessa forma aqui, acabamos de fazer a mesma coisa, fica na ordem crescente. Se quiser em ordem decrescente, basta inverter 
+
+})
+
+console.log(clientes)
+
+recados.sort((a,b) =>{
+    if(a.id > b.id){
+        return-1;
+    }
+    return 1;
+})
+console.log(recados)
+
+//EXERCICIOS 
+
+// Você está organizando uma lista de nomes e quer se certificar de que todos os convidados estão organizados em ordem alfabética para facilitar a hora de fazer as ligações 
+let nomes = ["Carlos", "Ana", "Mariana", "Felipe", "João"]
+
+nomes.sort();
+console.log(nomes)
+
+//Você está organizando uma equipe para um torneio de esportes e precisa classificar os participantes por idade. Para isso, você fez uma lista com as idades deles e quer organizá-los do mais jovem para o mais velho
+let clientesLista = [
+    {nome: "Pedro", idade: 20},
+    {nome: "Joana", idade: 25},
+    {nome: "Maria", idade: 12},
+    {nome: "Cleide", idade: 65},
+]
+
+clientesLista.sort((a,b) =>{
+    if(a.idade < b.idade) {
+        return -1;
+    }
+    return 1
+});
+
+console.log(clientesLista)

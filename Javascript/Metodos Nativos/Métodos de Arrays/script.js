@@ -309,3 +309,56 @@ let listaAtualizada = recados.map(item => {
 
 console.log(recados)
 console.log(listaAtualizada)
+
+
+
+// FOREACH
+
+recados.forEach(item=>{
+    item.id = item.id + 500;
+    console.log(item)
+})
+
+console.table(recados)
+
+
+//EXERCICIOS
+
+//Em um supermercado, o gerente decidiu dar um desconto de 10% em alguns produtos. Sua tarefa é calcular o preço final desses produtos com o desconto aplicado e exibir uma nova lista de preços
+let produtos = [
+    {nome: "Arroz", preco: 20},
+    {nome: "Feijão", preco: 10},
+    {nome: "Macarrão", preco: 8},
+    {nome: "Açúcar", preco: 5},
+]
+
+let produtosComDesconto = produtos.map(item =>{
+    return{
+        nome: item.nome, preco: item.preco - (item.preco * 0.1)
+    }
+})
+
+console.log(produtosComDesconto)
+
+
+// Você trabalha em uma biblioteca e precisa criar uma lista para saber quantas paginas ainda faltam para terminar de ler cada livro. Para isso, você tem uma lista de livros com o total de páginas que já foram lidas
+let livros = [
+    {titulo: "O Senhor dos Anéis", totalPaginas: 1000, paginasLidas: 320},
+    {titulo: "1984", totalPaginas: 328, paginasLidas: 100},
+    {titulo: "O Código da Vinci", totalPaginas: 96, paginasLidas: 50},
+]
+
+let livrosPaginasRestantes = livros.map(item => {
+    return {
+        titulo: item.titulo, paginasRestantes: item.totalPaginas - item.paginasLidas
+    }
+})
+
+console.log(livrosPaginasRestantes)
+
+// Você está organizando uma festa e tem uma lista de convidados. Agora quer enviar uma mensagem de confirmação para cada um deles. Mostre no console uma mensagem para cada convidado usando forEach
+let convidados = ["João", "Maria", "Carlos", "Fernanda"];
+
+convidados.forEach(item=>{
+    console.log(`Olá, ${item}! Você está confirmado`)
+})

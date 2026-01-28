@@ -231,3 +231,30 @@ let produto10ItensEstoque = produtos.find(produtos => produtos.estoque >=10)
     console.log(produto10ItensEstoque)
 }
 
+//EVERY E SOME
+
+//EXERCICIOS
+
+//1- Um usuário tem uma lista de pessoas com suas idades e deseja verificar se existe pelo menos uma pessoa maior de 18 anos
+
+let pessoas = [
+    {nome: "Lucas", idade: 16},
+    {nome: "Maria", idade: 22},
+    {nome: "Carlos", idade: 15},
+    {nome: "Fernanda", idade: 30},
+];
+
+let pessoaMaiorDeIdade = pessoas.some(pessoas => pessoas.idade > 18)
+console.log(pessoaMaiorDeIdade)
+
+//2- Um estudante tem uma lista de taredas de estudo e deseja verificar se todas as tarefas foram concluidas 
+
+let tarefasEstudo = [
+    {descricao: "Estudar Matemática", concluido: true},
+    {descricao: "Revisar Física", concluido: true},
+    {descricao: "Fazer exercícios de química", concluido: true},
+    {descricao: "Ler capítulo de biologia", concluido: false},
+];
+
+let tarefasConcluidas = tarefasEstudo.every(tarefasEstudo => tarefasEstudo.concluido)
+console.log(tarefasConcluidas)

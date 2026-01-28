@@ -51,6 +51,12 @@ console.table(estanteDeLivros)
 estanteDeLivros.shift();
 console.table(estanteDeLivros)
 
+
+
+
+
+
+
 //FILTER
 /*
 let recados = [
@@ -138,7 +144,9 @@ let cidades = [
 let cidadesRs = cidades.filter((cidades)=> cidades.estado=="RS")
 
 console.table(cidadesRs)
-  */
+  
+
+
 
 //FIND
 
@@ -176,7 +184,9 @@ console.log(recadoInexistente)
 if(!recadoInexistente){
     alert("Erro, o recado não existe!")
 }
-*/
+
+
+
 
 
 // FIND INDEX
@@ -231,6 +241,8 @@ let produto10ItensEstoque = produtos.find(produtos => produtos.estoque >=10)
     console.log(produto10ItensEstoque)
 }
 
+*/
+
 //EVERY E SOME
 
 //EXERCICIOS
@@ -258,3 +270,42 @@ let tarefasEstudo = [
 
 let tarefasConcluidas = tarefasEstudo.every(tarefasEstudo => tarefasEstudo.concluido)
 console.log(tarefasConcluidas)
+
+
+
+
+//MAP
+
+let recados = [
+    {
+        id: 312,
+        descricao: "Estudar Javascript",
+        urgente: true
+    },
+    {
+        id: 412,
+        descricao: "Fazer os exercícios",
+        urgente: true
+    },
+    {
+        id: 117,
+        descricao: "Entender listas",
+        urgente: false
+    },
+    {
+        id: 55,
+        descricao: "Comparar Javascript com python",
+        urgente: false
+    },
+];
+
+let listaAtualizada = recados.map(item => {
+    return {
+        id: item.id + 100,
+        descricao: item.descricao,
+        urgente: item.urgente
+    }
+});
+
+console.log(recados)
+console.log(listaAtualizada)

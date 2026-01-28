@@ -37,11 +37,11 @@ console.table(listaDeCompras)
 
 //02 - Um cliente tem uma lista de frutas e quer remover a última fruta da lista
 
-let frutas = ['maça', 'banana', 'laranja']
-console.table(frutas)
+//let frutas = ['maça', 'banana', 'laranja']
+//console.table(frutas)
 
-frutas.pop()
-console.table(frutas)
+//frutas.pop()
+//console.table(frutas)
 
 //03 - Um usuário tem uma estante de livros com os seguintes titulos: "Game of Thrones", "Harry Potter" e o "Código da Vinci". Ele deseja remover o primeiro livro da estante 
 
@@ -241,7 +241,7 @@ let produto10ItensEstoque = produtos.find(produtos => produtos.estoque >=10)
     console.log(produto10ItensEstoque)
 }
 
-*/
+
 
 //EVERY E SOME
 
@@ -362,3 +362,54 @@ let convidados = ["João", "Maria", "Carlos", "Fernanda"];
 convidados.forEach(item=>{
     console.log(`Olá, ${item}! Você está confirmado`)
 })
+    */
+
+let recados = [
+    {
+        id: 312,
+        descricao: "Estudar Javascript",
+        urgente: true
+    },
+    {
+        id: 412,
+        descricao: "Fazer os exercícios",
+        urgente: true
+    },
+    {
+        id: 117,
+        descricao: "Entender listas",
+        urgente: false
+    },
+    {
+        id: 55,
+        descricao: "Comparar Javascript com python",
+        urgente: false
+    },
+];
+
+// SLICE 
+//Não altera a lista original, apenas mostra uma fatia dela
+
+let recadosRestantes = recados.slice(1,3) //O primeiro indica o array que começa e o ultimo parâmetro é pro array que termina... No exemplo, o 3 é referente ao penúltimo array da minha lista, pois ele considera um número anterior. E se não informar porto de término, ele percorre a lista toda. 
+console.log(recadosRestantes)
+
+
+//EXERCICIOS
+
+//1- Vamos imaginar que você tem uma lista de frutas e deseja obter apenas as primeiras três frutas dessa lista:
+let frutas = ["Maça","Banana","Laranja", "Uva", "abacaxi"]
+
+let tresPrimeiras = frutas.slice(0, 3)
+console.log(tresPrimeiras)
+
+//2-Você tem uma lista de tarefas e deseja obter todas as tarefas, exceto as duas primeiras, mas sem alterar a lista original
+let tarefas = ["Estudar para a prova", "Revisar os exercícios", "Assistir as aulas", "Ler um livro"]
+
+let tarefasRestantes = tarefas.slice(2)
+console.log(tarefasRestantes
+)
+
+//3- Refaça o exercicio 2, mas dessa vez exluindo os dois primeiros itens da lista original
+
+tarefas.splice(0,2)
+console.table(tarefas)

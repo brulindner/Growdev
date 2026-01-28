@@ -413,3 +413,32 @@ console.log(tarefasRestantes
 
 tarefas.splice(0,2)
 console.table(tarefas)
+
+//JOIN, INCLUDES E REVERSE
+
+//1- Você tem uma lista de ingredientes para uma receita e deseja criar uma unica string que contenha todos os ingredientes separados por vírgulas
+let ingredientes = ["Farinha", "Açúcar", "Ovos", "Leite", "Manteiga"]
+
+let receita = ingredientes.join(", ")
+console.log(receita)
+
+//2 - Você está organizando um campeonato de jogos e tem uma lista de jogadores inscritos. Você quer verificar se um jogador específico se inscreveu no campeonato
+let jogadoresInscritos = ["Lucas", "Mariana", "Felipe", "Tatiane", "Roberto"]
+let jogadoresParaVerificar = "Felipe"
+
+let jogadorInscrito = jogadoresInscritos.includes(jogadoresParaVerificar)
+
+console.log(jogadorInscrito)
+
+//3 - Você é o organizador de um campeonato de futebol. Para garantir que tudo saia conforme o planejado, você criou uma lista de tarefas. Mas essa lista está em ordem invertida e você precisa corrigir
+
+let tarefasDoCampeonato = [
+    "Divulgar o evento",
+    "Definir equipes",
+    "Comprar os prêmios",
+    "Escolher o local do jogo",
+    "Criar as regras do torneio"
+]
+
+tarefasDoCampeonato.reverse()
+console.log(tarefasDoCampeonato)

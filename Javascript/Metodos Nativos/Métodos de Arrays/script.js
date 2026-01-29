@@ -1,3 +1,4 @@
+/*
 let listaCompras = ["arroz", "feijão", "pão"]
 console.table(listaCompras);
 
@@ -51,7 +52,7 @@ console.table(estanteDeLivros)
 estanteDeLivros.shift();
 console.table(estanteDeLivros)
 
-
+/*
 
 
 
@@ -81,6 +82,7 @@ let recados = [
         urgente: false
     },
 ];
+
 
 console.table(recados);
 */
@@ -503,3 +505,58 @@ clientesLista.sort((a,b) =>{
 });
 
 console.log(clientesLista)
+
+//REDUCE 
+//Objetivo de reduzir uma lista, transformar uma lista em um número ou em um objeto por exemplo
+
+const listaDeCompras = [
+    {id: 55, descricao: 'Arroz', valor: 20.0, categoria:"Alimentos"},
+    {id: 90, descricao: 'Feijão', valor: 10.0, categoria:"Alimentos"},
+    {id: 55, descricao: 'Macarrão', valor: 8.5, categoria:"Alimentos"},
+    {id: 55, descricao: 'Óleo', valor: 12.0, categoria:"Bazar"},
+]
+
+let soma = listaDeCompras.reduce((somaAtual, item) => {
+    return somaAtual + item.valor;
+}, 0); //Aqui no final, preciso colocar o ponto inicial, no caso de uma soma, o ponto inical é "0". Se fosse um objeto, o inicio seria um objeto vazio "{}" por exemplo
+
+console.log(soma)
+
+let categorias = listaDeCompras.reduce((atual, item) => {
+    if(!atual[item.categoria]){
+        atual[item.categoria] = [];
+    }
+
+    atual[item.categoria].push(item)
+
+    return atual
+}, {});
+
+console.table(categorias)
+
+//EXERCICIOS
+
+//Um funcionário de uma loja precisa saber quanto vendeu no ultimo dia. Então ele fez uma lista com os valores das vendas dos produtos e calculou o total
+let vendas = [150.75, 200.5, 50.25, 80.0, 120.0]
+
+let totalVendas = vendas.reduce((atual,item) =>{
+    return atual + item;
+}, 0);
+
+console.log(totalVendas)
+
+//Você está acompanhando um campeonato de videogame e deseja saber quantos pontos seus amigos acumularam juntps em uma partida
+
+let pontosJogadores = [
+    {jogador: "Pedro", pontos: 20},
+    {jogador: "Maria", pontos: 50},
+    {jogador: "Cleide", pontos: 5},
+    {jogador: "Pedro", pontos: 150},
+    {jogador: "Maria", pontos: 298},
+]
+
+let totalPontos = pontosJogadores.reduce((atual, item) =>{
+    return atual + item.pontos;
+}, 0);
+
+console.log(totalPontos)

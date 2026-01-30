@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button{
+            background-color: yellow;
+            border: none;
+            padding: 10px; 
+            cursor: pointer;
+        }
+
+
+    </style>
+</head>
+<body id="fundo">
+    <button id="btn-color" onclick="alterarCor()">ALTERAR COR DE FUNDO</button>
+
+
+    <script>
+        
+        function alterarCor(){
+           let novaCor = prompt("Digite o nome da nova cor, em inglês: ")
+        
+           if(novaCor){
+            document.body.style.backgroundColor = novaCor;
+           }
+        }
+
+
+
+    </script>
+
+</body>
+</html>

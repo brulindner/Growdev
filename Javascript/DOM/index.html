@@ -17,12 +17,36 @@
             padding: 10px; 
             cursor: pointer;
         }
-
-
     </style>
 </head>
 <body>
-    <button id="btn-color" onclick="alterarCor()">ALTERAR COR DE FUNDO</button>
+    <h1 id="titulo">Título Original</h1>
+    <p class="texto">Esse é um parágrafo</p>
+
+    <button id="btn-alterar-titulo">Alterar Título</button>
+    <button id="btn-alterar-paragrafo">Alterar Parágrafo</button>
+
+    <script>
+        //Selecionando o título pelo Id e o texto pela classe
+
+        const titulo = document.getElementById('titulo')
+        const paragrafo = document.querySelector('.texto')
+
+        //Alterando o texto do título ao clicar no botão
+        document.getElementById('btn-alterar-titulo').addEventListener('click', function(){
+            titulo.innerText = 'Título Alterado!'
+        })
+
+        //Alterando o texto do parágrafo
+        document.getElementById('btn-alterar-paragrafo').addEventListener('click', function(){
+            paragrafo.innerText = 'Parágrafo Alterado!'
+        })
+    </script>
+
+
+
+
+  <!---<button id="btn-color" onclick="alterarCor()">ALTERAR COR DE FUNDO</button>
     <script>
         function alterarCor(){
            let novaCor = prompt("Digite o nome da nova cor, em inglês: ")
@@ -31,6 +55,7 @@
             document.body.style.backgroundColor = novaCor;
            }
         }
-    </script>
+    </script>--->
+
 </body>
 </html>

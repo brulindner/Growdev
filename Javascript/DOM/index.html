@@ -20,6 +20,64 @@
     </style>
 </head>
 <body>
+    <h1>Título Principal</h1>
+    <p class="texto">Parágrafo</p>
+    <p class="texto">Parágrafo 2</p>
+    <p class="texto">Parágrafo 3</p>
+    <p>Parágrafo 4</p>
+
+    <button id="btn-alterar-por-classe">Alterar Todos os Parágrafos (Classe)</button>
+    <button id="btn-alterar-por-tag">Alterar Todos os Parágrafos (Tag)</button>
+    <button id="btn-alterar-com-query">Alterar Todos os Parágrafos (querySelectorAll)</button>
+
+    <script>
+        //Usando getElementsByClassName para selecionar todos os parágrafos com a classe .texto
+        const paragsByClass = document.getElementsByClassName('texto')
+
+        //Usando getElementBtTagName para selecionar todos os elementos <p>
+        const paragsByTag = document.getElementsByTagName('p')
+
+        //Usando querySelectorAll para selecionar todos os elementos <p> com a classe .texto
+            const paragsByQuery = document.querySelectorAll('.texto')
+
+        //Alterar o texto de todos os parágrafos usando getElementByClassName
+        document.getElementById('btn-alterar-por-classe').addEventListener('click', function(){
+        for(let i = 0; i < paragsByClass.length; i++){
+            paragsByClass[i].innerText = `Alterado por classe - Parágrafo ${i + 1}`;
+        }})
+
+        //Alterar o texto de todos os parágrafos usando getElementByTagName
+        document.getElementById('btn-alterar-por-tag').addEventListener('click', function(){
+        for(let i = 0; i < paragsByTag.length; i++){
+            paragsByTag[i].innerText = `Alterado por Tag - Parágrafo ${i + 1}`;
+        }})
+
+        //Alterar o texto de todos os parágrafos usando querySelectorAll
+        document.getElementById('btn-alterar-com-query').addEventListener('click', function(){
+        paragsByQuery.forEach((parag, index) => {
+            parag.innerText = `Alterado por querySelectorAll - Parágrafo ${index + 1}`;
+        });
+    });
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!---CAPTURANDO ELEMENTOS DO DOM - PARTE 1 -->
+
+    <!--
     <h1 id="titulo">Título Original</h1>
     <p class="texto">Esse é um parágrafo</p>
 
@@ -42,9 +100,11 @@
             paragrafo.innerText = 'Parágrafo Alterado!'
         })
     </script>
+    -->
 
 
 
+ <!---EXERCÍCIO ALTERAR COR DE FUNDO -->
 
   <!---<button id="btn-color" onclick="alterarCor()">ALTERAR COR DE FUNDO</button>
     <script>
